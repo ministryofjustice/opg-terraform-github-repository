@@ -1,9 +1,9 @@
 resource "github_repository" "repository" {
   name = var.name
 
-  allow_merge_commit     = true
-  allow_squash_merge     = true
-  allow_rebase_merge     = true
+  allow_merge_commit     = var.allow_merge_commit
+  allow_squash_merge     = var.allow_squash_merge
+  allow_rebase_merge     = var.allow_rebase_merge
   archived               = var.archived
   auto_init              = var.auto_init
   description            = "${var.description}: Managed by opg-org-infra & Terraform"
