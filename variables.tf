@@ -156,3 +156,18 @@ variable "template" {
   })
   default = null
 }
+
+variable "allow_rebase_merge" {
+  description = "Allow Rebase Commits, defualts to true"
+  default     = true
+}
+
+variable "allow_squash_merge" {
+  description = "Allow Squash Commits, defualts to true"
+  default     = true
+}
+
+variable "allow_merge_commit" {
+  description = "Allow Merge Commits, defualts to true"
+  default     = true
+}
