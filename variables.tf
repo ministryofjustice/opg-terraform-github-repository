@@ -171,3 +171,8 @@ variable "allow_merge_commit" {
   description = "Allow Merge Commits, defualts to true"
   default     = true
 }
+
+variable "is_template" {
+  description = "Define as a template repository"
+  default     = false
+}

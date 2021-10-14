@@ -13,6 +13,7 @@ resource "github_repository" "repository" {
   has_wiki               = var.has_wiki
   has_downloads          = false
   homepage_url           = var.homepage_url
+  is_template            = var.is_template
   visibility             = var.visibility
   vulnerability_alerts   = var.vulnerability_alerts
 
