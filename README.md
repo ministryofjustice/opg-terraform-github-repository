@@ -59,6 +59,7 @@ No modules.
 | <a name="input_has_projects"></a> [has\_projects](#input\_has\_projects) | Turns on/off github projects | `bool` | `false` | no |
 | <a name="input_has_wiki"></a> [has\_wiki](#input\_has\_wiki) | Turns on/off the github wiki | `bool` | `false` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Home page URL for the Git repo | `string` | `""` | no |
+| <a name="input_is_template"></a> [is\_template](#input\_is\_template) | Define as a template repository | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the repository | `string` | n/a | yes |
 | <a name="input_pages"></a> [pages](#input\_pages) | The repository's GitHub Pages configuration. (Default: {}) | `any` | `null` | no |
 | <a name="input_require_ci_pass"></a> [require\_ci\_pass](#input\_require\_ci\_pass) | Require all CI checks listed in status\_checks to pass | `bool` | `true` | no |
