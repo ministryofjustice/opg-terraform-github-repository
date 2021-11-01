@@ -13,7 +13,7 @@ resource "github_team_repository" "admin_team_access" {
 }
 
 resource "github_team_repository" "developer_access" {
-  count      = var.admin_team_only ? 0 : 1
+  count      = var.developer_team == "" ? 0 : 1
   team_id    = var.developer_team
   repository = github_repository.repository.name
   permission = "maintain"
