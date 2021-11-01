@@ -52,7 +52,7 @@ resource "github_branch_default" "default" {
   branch     = var.default_branch_name
 }
 
-resource "github_branch_protection" "repository_master" {
+resource "github_branch_protection_v3" "repository_main" {
   count = var.branch_protection_enabled == true ? 1 : 0
 
   repository_id    = github_repository.repository.node_id
