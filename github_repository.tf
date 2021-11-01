@@ -55,10 +55,9 @@ resource "github_branch_default" "default" {
 resource "github_branch_protection_v3" "repository_main" {
   count = var.branch_protection_enabled == true ? 1 : 0
 
-  repository_id    = github_repository.repository.node_id
-  pattern          = var.default_branch_name
-  enforce_admins   = var.enforce_admins
-  allows_deletions = true
+  repository     = github_repository.repository.name
+  branch         = var.default_branch_name
+  enforce_admins = var.enforce_admins
 
   required_status_checks {
     strict   = var.require_ci_pass
