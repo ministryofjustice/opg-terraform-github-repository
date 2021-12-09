@@ -176,3 +176,9 @@ variable "is_template" {
   description = "Define as a template repository"
   default     = false
 }
+
+variable "topics" {
+  type        = list(any)
+  default     = []
+  description = "A list of topics."
+}
