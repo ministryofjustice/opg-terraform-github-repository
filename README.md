@@ -69,6 +69,7 @@ No modules.
 | <a name="input_template"></a> [template](#input\_template) | Template repository to use. (Default: {}) | <pre>object({<br>    owner      = string<br>    repository = string<br>  })</pre> | `null` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility of the repository. | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Enable security alerts for vulnerable dependencies. Defaults to True | `bool` | `true` | no |
+| <a name="input_topics"></a> [vulnerability\_topics](#input\_vulnerability\_topics_) | List of topics to add to the repository | `list(any)` | `[]` | no |
 
 ## Outputs
 
