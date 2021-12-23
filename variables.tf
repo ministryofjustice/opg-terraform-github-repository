@@ -182,3 +182,16 @@ variable "topics" {
   default     = []
   description = "A list of topics."
 }
+
+variable "service_teams" {
+  type        = list(any)
+  default     = []
+  description = "A list of teams that own this repository."
+}
+
+
+variable "dependent_repositories" {
+  type        = list(any)
+  default     = []
+  description = "A list of repositories that rely on this repository."
+}
