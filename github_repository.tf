@@ -19,8 +19,7 @@ resource "github_repository" "repository" {
 
   topics = concat(
     var.topics,
-    var.service_teams,
-    var.dependent_repositories,
+    []
   )
 
   dynamic "pages" {
