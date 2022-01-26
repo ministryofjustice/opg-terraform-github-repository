@@ -70,8 +70,6 @@ No modules.
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility of the repository. | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Enable security alerts for vulnerable dependencies. Defaults to True | `bool` | `true` | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | List of topics to add to the repository | `list(any)` | `[]` | no |
-| <a name="input_serviceteams"></a> [service_teams](#input\_serviceteams) | List of service teams that take ownership of this repository | `list(any)` | `[]` | no |
-| <a name="input_dependentrepositories"></a> [dependent_repositories](#input\_dependentrepositories) | List of repositories that are dependent on this one for their operation | `list(any)` | `[]` | no |
 
 
 ## Outputs
