@@ -19,8 +19,8 @@ resource "github_repository" "repository" {
 
   topics = concat(
     var.topics,
-    formatlist("owning-team-%s", var.service_teams),
-    formatlist("dependent-on-%s", var.dependent_repositories),
+    formatlist("o-%s", var.service_teams),
+    formatlist("d-%s", var.dependent_repositories),
   )
 
   dynamic "pages" {
