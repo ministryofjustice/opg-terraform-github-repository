@@ -16,12 +16,7 @@ resource "github_repository" "repository" {
   is_template            = var.is_template
   visibility             = var.visibility
   vulnerability_alerts   = var.vulnerability_alerts
-
-  topics = concat(
-    var.topics,
-    formatlist("o-%s", var.service_teams),
-    formatlist("d-%s", var.dependent_repositories),
-  )
+  topics                 = var.topics
 
   dynamic "pages" {
     for_each = var.pages != null ? [true] : []
