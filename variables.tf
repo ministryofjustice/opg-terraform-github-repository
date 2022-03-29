@@ -23,7 +23,7 @@ variable "visibility" {
 
 variable "has_issues" {
   type        = bool
-  default     = false
+  default     = true
   description = "Turns on/off github issues"
 }
 
