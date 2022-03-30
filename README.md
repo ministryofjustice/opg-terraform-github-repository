@@ -27,7 +27,7 @@ No modules.
 | [circleci_project.project](https://registry.terraform.io/providers/TomTucka/circleci/latest/docs/resources/project) | resource |
 | [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/actions_secret) | resource |
 | [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/branch_default) | resource |
-| [github_branch_protection.repository_master](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/branch_protection) | resource |
+| [github_branch_protection_v3.repository_main](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/branch_protection_v3) | resource |
 | [github_repository.repository](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/repository) | resource |
 | [github_team_repository.admin_team_access](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/team_repository) | resource |
 | [github_team_repository.developer_access](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/team_repository) | resource |
@@ -55,7 +55,7 @@ No modules.
 | <a name="input_dismiss_stale_reviews"></a> [dismiss\_stale\_reviews](#input\_dismiss\_stale\_reviews) | Dismiss approved reviews automatically when a new commit is pushed. Defaults to true. | `bool` | `true` | no |
 | <a name="input_enforce_admins"></a> [enforce\_admins](#input\_enforce\_admins) | Boolean, setting this to true enforces status checks for repository administrators | `bool` | `true` | no |
 | <a name="input_github_secrets"></a> [github\_secrets](#input\_github\_secrets) | A map of secrets to pass to GitHub | `map(any)` | `{}` | no |
-| <a name="input_has_issues"></a> [has\_issues](#input\_has\_issues) | Turns on/off github issues | `bool` | `false` | no |
+| <a name="input_has_issues"></a> [has\_issues](#input\_has\_issues) | Turns on/off github issues | `bool` | `true` | no |
 | <a name="input_has_projects"></a> [has\_projects](#input\_has\_projects) | Turns on/off github projects | `bool` | `false` | no |
 | <a name="input_has_wiki"></a> [has\_wiki](#input\_has\_wiki) | Turns on/off the github wiki | `bool` | `false` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Home page URL for the Git repo | `string` | `""` | no |
@@ -67,10 +67,9 @@ No modules.
 | <a name="input_required_approving_review_count"></a> [required\_approving\_review\_count](#input\_required\_approving\_review\_count) | Require x number of approvals to satisfy branch protection requirements. If this is specified it must be a number between 1-6. Defaults to 1 | `number` | `1` | no |
 | <a name="input_status_checks"></a> [status\_checks](#input\_status\_checks) | A list of required passing CI checks. | `list(any)` | `[]` | no |
 | <a name="input_template"></a> [template](#input\_template) | Template repository to use. (Default: {}) | <pre>object({<br>    owner      = string<br>    repository = string<br>  })</pre> | `null` | no |
+| <a name="input_topics"></a> [topics](#input\_topics) | A list of topics. | `list(any)` | `[]` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility of the repository. | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Enable security alerts for vulnerable dependencies. Defaults to True | `bool` | `true` | no |
-| <a name="input_topics"></a> [topics](#input\_topics) | List of topics to add to the repository | `list(any)` | `[]` | no |
-
 
 ## Outputs
 
