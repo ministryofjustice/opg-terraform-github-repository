@@ -7,14 +7,14 @@ Standard OPG GitHub Repository Module: Managed by opg-org-infra &amp; Terraform
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | 4.11.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | 4.26.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_circleci"></a> [circleci](#provider\_circleci) | n/a |
-| <a name="provider_github"></a> [github](#provider\_github) | 4.11.0 |
+| <a name="provider_circleci"></a> [circleci](#provider\_circleci) | 0.5.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | 4.26.1 |
 
 ## Modules
 
@@ -25,15 +25,15 @@ No modules.
 | Name | Type |
 |------|------|
 | [circleci_project.project](https://registry.terraform.io/providers/TomTucka/circleci/latest/docs/resources/project) | resource |
-| [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/actions_secret) | resource |
-| [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/branch_default) | resource |
-| [github_branch_protection_v3.repository_main](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/branch_protection_v3) | resource |
-| [github_repository.repository](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/repository) | resource |
-| [github_team_repository.admin_team_access](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/team_repository) | resource |
-| [github_team_repository.developer_access](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/team_repository) | resource |
-| [github_team_repository.opg_access](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/resources/team_repository) | resource |
-| [github_team.opg](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/data-sources/team) | data source |
-| [github_team.webops](https://registry.terraform.io/providers/integrations/github/4.11.0/docs/data-sources/team) | data source |
+| [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/actions_secret) | resource |
+| [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/branch_default) | resource |
+| [github_branch_protection_v3.repository_main](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/branch_protection_v3) | resource |
+| [github_repository.repository](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/repository) | resource |
+| [github_team_repository.admin_team_access](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/team_repository) | resource |
+| [github_team_repository.developer_access](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/team_repository) | resource |
+| [github_team_repository.opg_access](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/team_repository) | resource |
+| [github_team.opg](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/data-sources/team) | data source |
+| [github_team.webops](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/data-sources/team) | data source |
 
 ## Inputs
 
