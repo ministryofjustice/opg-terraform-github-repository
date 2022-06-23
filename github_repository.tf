@@ -44,7 +44,12 @@ resource "github_repository" "repository" {
   # NOTE: that we only do this on the repo and still care about it when looking
   # at branch protection
   lifecycle {
-    ignore_changes = [auto_init]
+    ignore_changes = [
+      auto_init,
+      # this is a hack that is needed because of
+      # https://github.com/integrations/terraform-provider-github/issues/1037
+      branches,
+    ]
   }
 }
 
