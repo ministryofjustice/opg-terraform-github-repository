@@ -41,6 +41,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_admin_team_only"></a> [admin\_team\_only](#input\_admin\_team\_only) | Disable developer team for this repository | `bool` | `false` | no |
 | <a name="input_allow_merge_commit"></a> [allow\_merge\_commit](#input\_allow\_merge\_commit) | Allow Merge Commits, defualts to true | `bool` | `true` | no |
+| <a name="input_allow_auto_merge"></a> [allow\_auto\_merge](#input\_allow\_auto\_merge) | Allow auto-merging on pull-requests, defualts to false | `bool` | `false` | no |
 | <a name="input_allow_rebase_merge"></a> [allow\_rebase\_merge](#input\_allow\_rebase\_merge) | Allow Rebase Commits, defualts to true | `bool` | `true` | no |
 | <a name="input_allow_squash_merge"></a> [allow\_squash\_merge](#input\_allow\_squash\_merge) | Allow Squash Commits, defualts to true | `bool` | `true` | no |
 | <a name="input_archived"></a> [archived](#input\_archived) | Archives the repository if set to true | `bool` | `false` | no |

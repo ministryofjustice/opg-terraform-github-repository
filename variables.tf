@@ -172,6 +172,13 @@ variable "allow_merge_commit" {
   default     = true
 }
 
+
+variable "allow_auto_merge" {
+  description = "Allow auto-merging on pull-requests"
+  default     = false
+}
+
+
 variable "is_template" {
   description = "Define as a template repository"
   default     = false
