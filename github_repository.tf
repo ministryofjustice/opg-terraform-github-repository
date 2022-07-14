@@ -2,6 +2,7 @@ resource "github_repository" "repository" {
   name = var.name
 
   allow_merge_commit     = var.allow_merge_commit
+  allow_auto_merge       = var.allow_auto_merge
   allow_squash_merge     = var.allow_squash_merge
   allow_rebase_merge     = var.allow_rebase_merge
   archived               = var.archived
