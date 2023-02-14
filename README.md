@@ -13,7 +13,6 @@ Standard OPG GitHub Repository Module: Managed by opg-org-infra &amp; Terraform
 
 | Name | Version |
 |------|---------|
-| <a name="provider_circleci"></a> [circleci](#provider\_circleci) | 0.5.0 |
 | <a name="provider_github"></a> [github](#provider\_github) | 4.26.1 |
 
 ## Modules
@@ -24,7 +23,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [circleci_project.project](https://registry.terraform.io/providers/TomTucka/circleci/latest/docs/resources/project) | resource |
 | [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/actions_secret) | resource |
 | [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/branch_default) | resource |
 | [github_branch_protection_v3.repository_main](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/branch_protection_v3) | resource |
@@ -47,8 +45,6 @@ No modules.
 | <a name="input_archived"></a> [archived](#input\_archived) | Archives the repository if set to true | `bool` | `false` | no |
 | <a name="input_auto_init"></a> [auto\_init](#input\_auto\_init) | Meaningful only during create; set to true to produce an initial commit in the repository. | `bool` | `true` | no |
 | <a name="input_branch_protection_enabled"></a> [branch\_protection\_enabled](#input\_branch\_protection\_enabled) | Boolean, setting this to false will disable branch protection | `bool` | `true` | no |
-| <a name="input_circleci_env_vars"></a> [circleci\_env\_vars](#input\_circleci\_env\_vars) | A map of environment variables to pass to CircleCI | `map(any)` | `{}` | no |
-| <a name="input_create_circleci_project"></a> [create\_circleci\_project](#input\_create\_circleci\_project) | Create a CircleCI project for a repository | `bool` | `true` | no |
 | <a name="input_default_branch_name"></a> [default\_branch\_name](#input\_default\_branch\_name) | Default branch name and the branch name with protection applied to it | `string` | `"main"` | no |
 | <a name="input_delete_branch_on_merge"></a> [delete\_branch\_on\_merge](#input\_delete\_branch\_on\_merge) | Automatically delete head branch after a pull request is merged. | `bool` | `false` | no |
 | <a name="input_description"></a> [description](#input\_description) | Repository description. Leave blank for default of: Development repository | `string` | `"Development repository"` | no |

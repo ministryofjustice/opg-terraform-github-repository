@@ -88,9 +88,3 @@ resource "github_actions_secret" "repository_secret" {
   plaintext_value = each.value
 }
 
-resource "circleci_project" "project" {
-  count      = var.create_circleci_project ? 1 : 0
-  name       = var.name
-  env_vars   = var.circleci_env_vars
-  depends_on = [github_repository.repository]
-}
