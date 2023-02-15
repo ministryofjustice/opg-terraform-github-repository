@@ -113,17 +113,6 @@ variable "developer_team" {
   default     = ""
 }
 
-variable "create_circleci_project" {
-  type        = bool
-  description = "Create a CircleCI project for a repository"
-  default     = true
-}
-
-variable "circleci_env_vars" {
-  type        = map(any)
-  description = "A map of environment variables to pass to CircleCI"
-  default     = {}
-}
 
 variable "default_branch_name" {
   type        = string
