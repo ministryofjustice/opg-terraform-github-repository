@@ -67,7 +67,7 @@ resource "github_branch_protection_v3" "repository_main" {
   enforce_admins = var.enforce_admins
 
   required_status_checks {
-    strict   = var.require_ci_pass
+    strict   = length(var.status_checks) > 0 ? var.require_ci_pass: null
     contexts = length(var.status_checks) > 0 ? var.status_checks : null
   }
 
