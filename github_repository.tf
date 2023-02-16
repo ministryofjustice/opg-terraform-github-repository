@@ -60,12 +60,6 @@ resource "github_branch_default" "default" {
 }
 
 
-moved {
-  from = github_branch_protection_v3.repository_main
-  to   = github_branch_protection.repository_main
-}
-
-
 resource "github_branch_protection" "repository_main" {
   count = var.branch_protection_enabled == true ? 1 : 0
 
