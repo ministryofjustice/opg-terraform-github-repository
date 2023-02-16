@@ -69,7 +69,7 @@ resource "github_branch_protection" "repository_main" {
 
   required_status_checks {
     strict   = var.require_ci_pass
-    contexts = var.require_ci_pass == true ? var.status_checks : null
+    contexts = var.status_checks
   }
 
   required_pull_request_reviews {
