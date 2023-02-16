@@ -59,11 +59,12 @@ resource "github_branch_default" "default" {
   branch     = var.default_branch_name
 }
 
-resource "github_branch_protection_v3" "repository_main" {
+
+resource "github_branch_protection" "repository_main" {
   count = var.branch_protection_enabled == true ? 1 : 0
 
-  repository     = github_repository.repository.name
-  branch         = var.default_branch_name
+  repository_id  = github_repository.repository.name
+  pattern        = var.default_branch_name
   enforce_admins = var.enforce_admins
 
   required_status_checks {
@@ -86,5 +87,7 @@ resource "github_actions_secret" "repository_secret" {
   repository      = github_repository.repository.name
   secret_name     = each.key
   plaintext_value = each.value
+
+
 }
 
