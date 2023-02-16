@@ -62,7 +62,7 @@ resource "github_branch_default" "default" {
 resource "github_branch_protection" "repository_main" {
   count = var.branch_protection_enabled == true ? 1 : 0
 
-  repository_id  = github_repository.repository.node_id
+  repository_id  = github_repository.repository.name
   pattern        = var.default_branch_name
   enforce_admins = var.enforce_admins
 
@@ -89,3 +89,4 @@ resource "github_actions_secret" "repository_secret" {
 
 
 }
+
