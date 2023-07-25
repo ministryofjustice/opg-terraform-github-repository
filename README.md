@@ -1,19 +1,15 @@
-# opg-terraform-github-repository
-Standard OPG GitHub Repository Module: Managed by opg-org-infra &amp; Terraform
-
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | 4.26.1 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 4.26.1 |
+| <a name="provider_github"></a> [github](#provider\_github) | 5.32.0 |
 
 ## Modules
 
@@ -23,25 +19,25 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/actions_secret) | resource |
-| [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/branch_default) | resource |
-| [github_branch_protection_v3.repository_main](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/branch_protection_v3) | resource |
-| [github_repository.repository](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/repository) | resource |
-| [github_team_repository.admin_team_access](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/team_repository) | resource |
-| [github_team_repository.developer_access](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/team_repository) | resource |
-| [github_team_repository.opg_access](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/resources/team_repository) | resource |
-| [github_team.opg](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/data-sources/team) | data source |
-| [github_team.webops](https://registry.terraform.io/providers/integrations/github/4.26.1/docs/data-sources/team) | data source |
+| [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret) | resource |
+| [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_default) | resource |
+| [github_branch_protection.repository_main](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
+| [github_repository.repository](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
+| [github_team_repository.admin_team_access](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team_repository.developer_access](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team_repository.opg_access](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team_repository) | resource |
+| [github_team.opg](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/team) | data source |
+| [github_team.webops](https://registry.terraform.io/providers/integrations/github/latest/docs/data-sources/team) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_admin_team_only"></a> [admin\_team\_only](#input\_admin\_team\_only) | Disable developer team for this repository | `bool` | `false` | no |
-| <a name="input_allow_merge_commit"></a> [allow\_merge\_commit](#input\_allow\_merge\_commit) | Allow Merge Commits, defaults to true | `bool` | `true` | no |
-| <a name="input_allow_auto_merge"></a> [allow\_auto\_merge](#input\_allow\_auto\_merge) | Allow auto-merging on pull-requests, defaults to false | `bool` | `false` | no |
-| <a name="input_allow_rebase_merge"></a> [allow\_rebase\_merge](#input\_allow\_rebase\_merge) | Allow Rebase Commits, defaults to true | `bool` | `true` | no |
-| <a name="input_allow_squash_merge"></a> [allow\_squash\_merge](#input\_allow\_squash\_merge) | Allow Squash Commits, defaults to true | `bool` | `true` | no |
+| <a name="input_allow_auto_merge"></a> [allow\_auto\_merge](#input\_allow\_auto\_merge) | Allow auto-merging on pull-requests | `bool` | `false` | no |
+| <a name="input_allow_merge_commit"></a> [allow\_merge\_commit](#input\_allow\_merge\_commit) | Allow Merge Commits, defualts to true | `bool` | `true` | no |
+| <a name="input_allow_rebase_merge"></a> [allow\_rebase\_merge](#input\_allow\_rebase\_merge) | Allow Rebase Commits, defualts to true | `bool` | `true` | no |
+| <a name="input_allow_squash_merge"></a> [allow\_squash\_merge](#input\_allow\_squash\_merge) | Allow Squash Commits, defualts to true | `bool` | `true` | no |
 | <a name="input_archived"></a> [archived](#input\_archived) | Archives the repository if set to true | `bool` | `false` | no |
 | <a name="input_auto_init"></a> [auto\_init](#input\_auto\_init) | Meaningful only during create; set to true to produce an initial commit in the repository. | `bool` | `true` | no |
 | <a name="input_branch_protection_enabled"></a> [branch\_protection\_enabled](#input\_branch\_protection\_enabled) | Boolean, setting this to false will disable branch protection | `bool` | `true` | no |
@@ -74,4 +70,3 @@ No modules.
 |------|-------------|
 | <a name="output_git_clone_url"></a> [git\_clone\_url](#output\_git\_clone\_url) | n/a |
 | <a name="output_name"></a> [name](#output\_name) | n/a |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
