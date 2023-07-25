@@ -47,9 +47,6 @@ resource "github_repository" "repository" {
   lifecycle {
     ignore_changes = [
       auto_init,
-      # this is a hack that is needed because of
-      # https://github.com/integrations/terraform-provider-github/issues/1037
-      branches,
     ]
   }
 }
