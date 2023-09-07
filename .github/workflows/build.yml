@@ -54,4 +54,4 @@ jobs:
           WITH_V: true
       - name: Summary
         run: |
-          echo "Tag: $${{ steps.bump_version.outputs.new_tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "Tag: $${{ steps.bump_version.outputs.tag }}" >> $GITHUB_STEP_SUMMARY
