@@ -24,8 +24,9 @@ resource "github_repository" "repository" {
 
     content {
       source {
-        branch = var.pages.branch
-        path   = try(var.pages.path, "/")
+        branch    = var.pages.branch
+        path      = try(var.pages.path, "/")
+        workflow  = try(var.pages.workflow, "legacy")
       }
       cname = try(var.pages.cname, null)
     }
