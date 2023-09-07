@@ -52,3 +52,6 @@ jobs:
           PRERELEASE: ${{ !startsWith(env.BRANCH_NAME, 'main') }}
           RELEASE_BRANCHES: main
           WITH_V: true
+      - name: Summary
+        run: |
+          echo "Tag: $${{ steps.bump_version.outputs.new_tag }}" >> $GITHUB_STEP_SUMMARY
