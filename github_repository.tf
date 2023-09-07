@@ -24,8 +24,9 @@ resource "github_repository" "repository" {
 
     content {
       source {
-        branch = var.pages.branch
-        path   = try(var.pages.path, "/")
+        branch     = var.pages.branch
+        path       = try(var.pages.path, "/")
+        build_type = try(var.pages.build_type, "legacy")
       }
       cname = try(var.pages.cname, null)
     }
@@ -87,4 +88,3 @@ resource "github_actions_secret" "repository_secret" {
 
 
 }
-
