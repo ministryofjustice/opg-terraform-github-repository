@@ -82,6 +82,12 @@ variable "status_checks" {
   description = "A list of required passing CI checks."
 }
 
+variable "require_signed_commits" {
+  type        = bool
+  default     = false
+  description = "setting this to true requires all commits to be signed with GPG"
+}
+
 # Pull Request Reviews
 variable "dismiss_stale_reviews" {
   type        = bool
