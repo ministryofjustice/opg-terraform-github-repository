@@ -2,14 +2,14 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.7 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 6.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | 5.32.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | 6.6.0 |
 
 ## Modules
 
@@ -57,9 +57,10 @@ No modules.
 | <a name="input_pages"></a> [pages](#input\_pages) | The repository's GitHub Pages configuration. (Default: {}) | `any` | `null` | no |
 | <a name="input_require_ci_pass"></a> [require\_ci\_pass](#input\_require\_ci\_pass) | Require all CI checks listed in status\_checks to pass | `bool` | `true` | no |
 | <a name="input_require_code_owner_reviews"></a> [require\_code\_owner\_reviews](#input\_require\_code\_owner\_reviews) | Require an approved review in pull requests including files with a designated code owner. Defaults to true | `bool` | `false` | no |
+| <a name="input_require_signed_commits"></a> [require\_signed\_commits](#input\_require\_signed\_commits) | setting this to true requires all commits to be signed with GPG | `bool` | `true` | no |
 | <a name="input_required_approving_review_count"></a> [required\_approving\_review\_count](#input\_required\_approving\_review\_count) | Require x number of approvals to satisfy branch protection requirements. If this is specified it must be a number between 1-6. Defaults to 1 | `number` | `1` | no |
 | <a name="input_status_checks"></a> [status\_checks](#input\_status\_checks) | A list of required passing CI checks. | `list(any)` | `[]` | no |
-| <a name="input_template"></a> [template](#input\_template) | Template repository to use. (Default: {}) | <pre>object({<br>    owner      = string<br>    repository = string<br>  })</pre> | `null` | no |
+| <a name="input_template"></a> [template](#input\_template) | Template repository to use. (Default: {}) | <pre>object({<br/>    owner      = string<br/>    repository = string<br/>  })</pre> | `null` | no |
 | <a name="input_topics"></a> [topics](#input\_topics) | A list of topics. | `list(any)` | `[]` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Visibility of the repository. | `string` | `"private"` | no |
 | <a name="input_vulnerability_alerts"></a> [vulnerability\_alerts](#input\_vulnerability\_alerts) | Enable security alerts for vulnerable dependencies. Defaults to True | `bool` | `true` | no |
