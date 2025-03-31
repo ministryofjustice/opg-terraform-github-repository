@@ -84,7 +84,7 @@ variable "status_checks" {
 
 variable "require_signed_commits" {
   type        = bool
-  default     = false
+  default     = true
   description = "setting this to true requires all commits to be signed with GPG"
 }
 
