@@ -76,6 +76,8 @@ resource "github_branch_protection" "repository_main" {
     required_approving_review_count = var.required_approving_review_count
   }
 
+  require_signed_commits = var.require_signed_commits
+
   depends_on = [github_repository.repository]
 }
 
