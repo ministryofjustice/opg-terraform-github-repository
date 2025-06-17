@@ -57,7 +57,6 @@ resource "github_branch_default" "default" {
   branch     = var.default_branch_name
 }
 
-
 resource "github_branch_protection" "repository_main" {
   count = var.branch_protection_enabled == true ? 1 : 0
 
@@ -87,6 +86,82 @@ resource "github_actions_secret" "repository_secret" {
   repository      = github_repository.repository.name
   secret_name     = each.key
   plaintext_value = each.value
+}
 
+module "main_branch_protection_ruleset" {
+  count                       = main_branch_ruleset_enabled ? 1 : 0
+  source                      = "./modules/branch_protection"
+  ruleset_name                = "main"
+  repository                  = github_repository.repository.name
+  branch_default              = var.branch_default
+  bypass_enabled              = var.bypass_enabled
+  bypass_actor_id             = var.bypass_actor_id
+  bypass_actor_type           = var.bypass_actor_type
+  bypass_mode                 = var.bypass_mode
+  branch_pat_enabled          = var.branch_pat_enabled
+  branch_pat_operator         = var.branch_pat_operator
+  branch_pat_pattern          = var.branch_pat_pattern
+  branch_pat_name             = var.branch_pat_name
+  branch_pat_negate           = var.branch_pat_negate
+  author_pat_enabled          = var.author_pat_enabled
+  author_pat_operator         = var.author_pat_operator
+  author_pat_pattern          = var.author_pat_pattern
+  author_pat_name             = var.author_pat_name
+  author_pat_negate           = var.author_pat_negate
+  msg_pat_enabled             = var.msg_pat_enabled
+  msg_pat_operator            = var.msg_pat_operator
+  msg_pat_pattern             = var.msg_pat_pattern
+  msg_pat_name                = var.msg_pat_name
+  msg_pat_negate              = var.msg_pat_negate
+  committer_pat_enabled       = var.committer_pat_enabled
+  committer_pat_operator      = var.committer_pat_operator
+  committer_pat_pattern       = var.committer_pat_pattern
+  committer_pat_name          = var.committer_pat_name
+  committer_pat_negate        = var.committer_pat_negate
+  tag_pat_enabled             = var.tag_pat_enabled
+  tag_pat_operator            = var.tag_pat_operator
+  tag_pat_pattern             = var.tag_pat_pattern
+  tag_pat_name                = var.tag_pat_name
+  tag_pat_negate              = var.tag_pat_negate
+  merge_queue_enabled         = var.merge_queue_enabled
+  merge_queue_timeout         = var.merge_queue_timeout
+  merge_queue_grouping        = var.merge_queue_grouping
+  merge_queue_max_build       = var.merge_queue_max_build
+  merge_queue_max_merge       = var.merge_queue_max_merge
+  merge_queue_method          = var.merge_queue_method
+  merge_queue_min_merge       = var.merge_queue_min_merge
+  merge_queue_min_wait        = var.merge_queue_min_wait
+  pr_check_enabled            = var.pr_check_enabled
+  pr_dismiss_stale            = var.pr_dismiss_stale
+  pr_code_owner               = var.pr_code_owner
+  pr_last_push_approval       = var.pr_last_push_approval
+  pr_review_count             = var.pr_review_count
+  pr_resolve_threads          = var.pr_resolve_threads
+  deployments_enabled         = var.deployments_enabled
+  deploy_envs                 = var.deploy_envs
+  status_checks_enabled       = var.status_checks_enabled
+  status_check_context        = var.status_check_context
+  status_check_integration    = var.status_check_integration
+  status_check_strict         = var.status_check_strict
+  status_check_skip_on_create = var.status_check_skip_on_create
+  code_scan_enabled           = var.code_scan_enabled
+  code_scan_alert_thresh      = var.code_scan_alert_thresh
+  code_scan_sec_alert_thresh  = var.code_scan_sec_alert_thresh
+  code_scan_tool              = var.code_scan_tool
+  allow_creation              = var.allow_creation
+  allow_deletion              = var.allow_deletion
+  allow_non_ff                = var.allow_non_ff
+  allow_update                = var.allow_update
+  linear_history              = var.linear_history
+  signatures_required         = var.signatures_required
+  update_allows_merge         = var.update_allows_merge
+}
 
+module "all_branch_protection_ruleset" {
+  count               = all_branch_ruleset_enabled ? 1 : 0
+  source              = "./modules/branch_protection"
+  ruleset_name        = "all_branches"
+  repository          = github_repository.repository.name
+  branch_default      = "~ALL"
+  signatures_required = var.signatures_required
 }
