@@ -160,7 +160,7 @@ module "main_branch_protection_ruleset" {
 module "all_branch_protection_ruleset" {
   count               = all_branch_ruleset_enabled ? 1 : 0
   source              = "./modules/branch_protection"
-  ruleset_name        = "all_branches"
+  ruleset_name        = "match_all"
   repository          = github_repository.repository.name
   branch_default      = "~ALL"
   signatures_required = var.signatures_required
