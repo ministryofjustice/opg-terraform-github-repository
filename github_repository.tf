@@ -89,7 +89,7 @@ resource "github_actions_secret" "repository_secret" {
 }
 
 module "main_branch_protection_ruleset" {
-  count                       = main_branch_ruleset_enabled ? 1 : 0
+  count                       = var.main_branch_ruleset_enabled ? 1 : 0
   source                      = "./modules/branch_protection"
   ruleset_name                = "main"
   repository                  = github_repository.repository.name
@@ -158,10 +158,13 @@ module "main_branch_protection_ruleset" {
 }
 
 module "all_branch_protection_ruleset" {
-  count               = all_branch_ruleset_enabled ? 1 : 0
-  source              = "./modules/branch_protection"
-  ruleset_name        = "match_all"
-  repository          = github_repository.repository.name
-  branch_default      = "~ALL"
-  signatures_required = var.signatures_required
+  count                 = var.all_branch_ruleset_enabled ? 1 : 0
+  source                = "./modules/branch_protection"
+  ruleset_name          = "match_all"
+  repository            = github_repository.repository.name
+  branch_default        = "~ALL"
+  signatures_required   = var.signatures_required
+  dismiss_stale_reviews = false
+  pr_check_enabled      = false
+  status_checks_enabled = false
 }

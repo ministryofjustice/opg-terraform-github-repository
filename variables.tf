@@ -197,6 +197,12 @@ variable "main_branch_ruleset_enabled" {
   default     = false
 }
 
+variable "all_branch_ruleset_enabled" {
+  description = "Whether the all branch ruleset should be created"
+  type        = bool
+  default     = false
+}
+
 variable "branch_default" {
   description = "The default branch name to apply the ruleset to"
   type        = string
