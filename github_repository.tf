@@ -164,7 +164,6 @@ module "all_branch_protection_ruleset" {
   repository            = github_repository.repository.name
   branch_default        = "~ALL"
   signatures_required   = var.signatures_required
-  dismiss_stale_reviews = false
   pr_check_enabled      = false
   status_checks_enabled = false
 }
