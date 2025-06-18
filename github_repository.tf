@@ -90,7 +90,7 @@ resource "github_actions_secret" "repository_secret" {
 
 resource "github_repository_ruleset" "repository_main" {
   count       = var.main_branch_ruleset_enabled ? 1 : 0
-  name        = "main"
+  name        = "main_branch"
   repository  = github_repository.repository.name
   target      = "branch"
   enforcement = "active"
@@ -254,11 +254,9 @@ resource "github_repository_ruleset" "repository_main" {
   }
 }
 
-
-
 resource "github_repository_ruleset" "repository_all" {
-  count       = var.main_branch_ruleset_enabled ? 1 : 0
-  name        = "name"
+  count       = var.pr_branch_ruleset_enabled ? 1 : 0
+  name        = "pull_request_branches"
   repository  = github_repository.repository.name
   target      = "branch"
   enforcement = "active"

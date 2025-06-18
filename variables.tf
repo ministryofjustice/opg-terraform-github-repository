@@ -197,8 +197,8 @@ variable "main_branch_ruleset_enabled" {
   default     = false
 }
 
-variable "all_branch_ruleset_enabled" {
-  description = "Whether the all branch ruleset should be created"
+variable "pr_branch_ruleset_enabled" {
+  description = "Whether the PR branch ruleset should be created"
   type        = bool
   default     = false
 }
