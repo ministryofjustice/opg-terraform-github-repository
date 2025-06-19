@@ -1,3 +1,23 @@
+terraform {
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 6.0"
+    }
+  }
+  required_version = "1.11.4"
+}
+
+provider "github" {
+  token = var.github_token
+  owner = "ministryofjustice"
+}
+
+variable "github_token" {
+  type        = string
+  description = "Github Token"
+}
+
 data "github_team" "opg" {
   slug = "opg"
 }
