@@ -34,7 +34,7 @@ module "test_repo" {
   has_wiki                    = false
   delete_branch_on_merge      = true
   branch_protection_enabled   = false
-  all_branch_ruleset_enabled  = true
+  pr_branch_ruleset_enabled   = true
   main_branch_ruleset_enabled = true
   status_checks_enabled       = true
   status_check_context        = "end of workflow"
