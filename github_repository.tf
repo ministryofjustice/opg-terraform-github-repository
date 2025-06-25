@@ -112,10 +112,10 @@ resource "github_repository_ruleset" "repository_main" {
   }
 
   rules {
-    creation                      = var.allow_creation
-    deletion                      = var.allow_deletion
-    non_fast_forward              = var.allow_non_ff
-    update                        = var.allow_update
+    creation                      = var.restrict_creation
+    deletion                      = var.restrict_deletion
+    non_fast_forward              = var.prevent_force_push
+    update                        = var.restrict_update
     required_linear_history       = var.linear_history
     required_signatures           = var.signatures_required
     update_allows_fetch_and_merge = var.update_allows_merge

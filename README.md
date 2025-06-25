@@ -37,13 +37,9 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_admin_team_only"></a> [admin\_team\_only](#input\_admin\_team\_only) | Disable developer team for this repository | `bool` | `false` | no |
 | <a name="input_allow_auto_merge"></a> [allow\_auto\_merge](#input\_allow\_auto\_merge) | Allow auto-merging on pull requests | `bool` | `false` | no |
-| <a name="input_allow_creation"></a> [allow\_creation](#input\_allow\_creation) | Allow branch creation | `bool` | `false` | no |
-| <a name="input_allow_deletion"></a> [allow\_deletion](#input\_allow\_deletion) | Allow branch deletion | `bool` | `false` | no |
 | <a name="input_allow_merge_commit"></a> [allow\_merge\_commit](#input\_allow\_merge\_commit) | Allow Merge Commits | `bool` | `true` | no |
-| <a name="input_allow_non_ff"></a> [allow\_non\_ff](#input\_allow\_non\_ff) | Allow non-fast-forward merges | `bool` | `true` | no |
 | <a name="input_allow_rebase_merge"></a> [allow\_rebase\_merge](#input\_allow\_rebase\_merge) | Allow Rebase Commits | `bool` | `true` | no |
 | <a name="input_allow_squash_merge"></a> [allow\_squash\_merge](#input\_allow\_squash\_merge) | Allow Squash Commits | `bool` | `true` | no |
-| <a name="input_allow_update"></a> [allow\_update](#input\_allow\_update) | Allow branch updates | `bool` | `true` | no |
 | <a name="input_archived"></a> [archived](#input\_archived) | Archives the repository if set to true | `bool` | `false` | no |
 | <a name="input_author_pat_enabled"></a> [author\_pat\_enabled](#input\_author\_pat\_enabled) | Enable commit author email pattern rule | `bool` | `false` | no |
 | <a name="input_author_pat_name"></a> [author\_pat\_name](#input\_author\_pat\_name) | Name of the author pattern rule | `string` | `"Author email rule"` | no |
@@ -109,10 +105,14 @@ No modules.
 | <a name="input_pr_last_push_approval"></a> [pr\_last\_push\_approval](#input\_pr\_last\_push\_approval) | Require review approval after the most recent push | `bool` | `true` | no |
 | <a name="input_pr_resolve_threads"></a> [pr\_resolve\_threads](#input\_pr\_resolve\_threads) | Require all review threads to be resolved before merging | `bool` | `false` | no |
 | <a name="input_pr_review_count"></a> [pr\_review\_count](#input\_pr\_review\_count) | Number of required approving reviews | `number` | `1` | no |
+| <a name="input_prevent_force_push"></a> [prevent\_force\_push](#input\_prevent\_force\_push) | Prevent users with push access from force pushing to branches | `bool` | `false` | no |
 | <a name="input_require_ci_pass"></a> [require\_ci\_pass](#input\_require\_ci\_pass) | Require all CI checks listed in status\_checks to pass | `bool` | `true` | no |
 | <a name="input_require_code_owner_reviews"></a> [require\_code\_owner\_reviews](#input\_require\_code\_owner\_reviews) | Require an approved review in pull requests including files with a designated code owner. Defaults to true | `bool` | `false` | no |
 | <a name="input_require_signed_commits"></a> [require\_signed\_commits](#input\_require\_signed\_commits) | setting this to true requires all commits to be signed with GPG | `bool` | `true` | no |
 | <a name="input_required_approving_review_count"></a> [required\_approving\_review\_count](#input\_required\_approving\_review\_count) | Require x number of approvals to satisfy branch protection requirements. If this is specified it must be a number between 1-6. Defaults to 1 | `number` | `1` | no |
+| <a name="input_restrict_creation"></a> [restrict\_creation](#input\_restrict\_creation) | Restrict branch creation to bypass | `bool` | `false` | no |
+| <a name="input_restrict_deletion"></a> [restrict\_deletion](#input\_restrict\_deletion) | Restrict branch deletion to bypass | `bool` | `false` | no |
+| <a name="input_restrict_update"></a> [restrict\_update](#input\_restrict\_update) | Restrict branch updates to bypass | `bool` | `false` | no |
 | <a name="input_signatures_required"></a> [signatures\_required](#input\_signatures\_required) | Require signed commits | `bool` | `true` | no |
 | <a name="input_status_check_context"></a> [status\_check\_context](#input\_status\_check\_context) | Name of the status check context to require | `string` | `""` | no |
 | <a name="input_status_check_integration"></a> [status\_check\_integration](#input\_status\_check\_integration) | ID of the integration associated with the status check | `number` | `null` | no |
