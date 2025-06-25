@@ -545,28 +545,28 @@ variable "code_scan_tool" {
 }
 
 # ===== Boolean flags for rule enforcement =====
-variable "allow_creation" {
-  description = "Allow branch creation"
-  type        = bool
-  default     = false
-}
-
-variable "allow_deletion" {
-  description = "Allow branch deletion"
-  type        = bool
-  default     = false
-}
-
 variable "allow_non_ff" {
   description = "Allow non-fast-forward merges"
   type        = bool
   default     = true
 }
 
-variable "allow_update" {
-  description = "Allow branch updates"
+variable "restrict_deletion" {
+  description = "Restrict branch deletion to bypass"
   type        = bool
-  default     = true
+  default     = false
+}
+
+variable "restrict_update" {
+  description = "Restrict branch updates to bypass"
+  type        = bool
+  default     = false
+}
+
+variable "restrict_creation" {
+  description = "Restrict branch creation to bypass"
+  type        = bool
+  default     = false
 }
 
 variable "linear_history" {
