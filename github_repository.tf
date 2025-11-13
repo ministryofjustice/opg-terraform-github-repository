@@ -46,6 +46,7 @@ resource "github_repository" "repository" {
   # NOTE: that we only do this on the repo and still care about it when looking
   # at branch protection
   lifecycle {
+    prevent_destroy = true
     ignore_changes = [
       auto_init,
     ]
