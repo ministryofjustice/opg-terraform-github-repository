@@ -13,6 +13,7 @@ variable "description" {
 variable "homepage_url" {
   default     = ""
   description = "Home page URL for the Git repo"
+  type        = string
 }
 
 variable "visibility" {
@@ -107,12 +108,6 @@ variable "required_approving_review_count" {
   description = "Require x number of approvals to satisfy branch protection requirements. If this is specified it must be a number between 1-6. Defaults to 1"
 }
 
-variable "admin_team_only" {
-  type        = bool
-  description = "Disable developer team for this repository"
-  default     = false
-}
-
 variable "developer_team" {
   type        = string
   description = "Team ID that developers belong to"
@@ -135,6 +130,7 @@ variable "pages" {
 variable "vulnerability_alerts" {
   description = "Enable security alerts for vulnerable dependencies. Defaults to True"
   default     = true
+  type        = bool
 }
 
 variable "github_secrets" {
@@ -585,4 +581,10 @@ variable "update_allows_merge" {
   description = "Allow merging changes via update"
   type        = bool
   default     = false
+}
+
+variable "allowed_github_actions" {
+  default     = []
+  description = "List of github actions that are allowed to be used on the repository"
+  type        = list(string)
 }
