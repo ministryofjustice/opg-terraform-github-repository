@@ -582,3 +582,9 @@ variable "update_allows_merge" {
   type        = bool
   default     = false
 }
+
+variable "allowed_github_actions" {
+  default     = []
+  description = "List of github actions that are allowed to be used on the repository"
+  type        = list(string)
+}

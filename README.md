@@ -19,6 +19,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [github_actions_repository_permissions.repository](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_repository_permissions) | resource |
 | [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret) | resource |
 | [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_default) | resource |
 | [github_branch_protection.repository_main](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
@@ -35,11 +36,11 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_admin_team_only"></a> [admin\_team\_only](#input\_admin\_team\_only) | Disable developer team for this repository | `bool` | `false` | no |
 | <a name="input_allow_auto_merge"></a> [allow\_auto\_merge](#input\_allow\_auto\_merge) | Allow auto-merging on pull requests | `bool` | `false` | no |
 | <a name="input_allow_merge_commit"></a> [allow\_merge\_commit](#input\_allow\_merge\_commit) | Allow Merge Commits | `bool` | `true` | no |
 | <a name="input_allow_rebase_merge"></a> [allow\_rebase\_merge](#input\_allow\_rebase\_merge) | Allow Rebase Commits | `bool` | `true` | no |
 | <a name="input_allow_squash_merge"></a> [allow\_squash\_merge](#input\_allow\_squash\_merge) | Allow Squash Commits | `bool` | `true` | no |
+| <a name="input_allowed_github_actions"></a> [allowed\_github\_actions](#input\_allowed\_github\_actions) | List of github actions that are allowed to be used on the repository | `list(string)` | `[]` | no |
 | <a name="input_archived"></a> [archived](#input\_archived) | Archives the repository if set to true | `bool` | `false` | no |
 | <a name="input_author_pat_enabled"></a> [author\_pat\_enabled](#input\_author\_pat\_enabled) | Enable commit author email pattern rule | `bool` | `false` | no |
 | <a name="input_author_pat_name"></a> [author\_pat\_name](#input\_author\_pat\_name) | Name of the author pattern rule | `string` | `"Author email rule"` | no |
