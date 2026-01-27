@@ -21,6 +21,7 @@ No modules.
 |------|------|
 | [github_actions_repository_permissions.repository](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_repository_permissions) | resource |
 | [github_actions_secret.repository_secret](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_secret) | resource |
+| [github_actions_variable.repository_variable](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/actions_variable) | resource |
 | [github_branch_default.default](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_default) | resource |
 | [github_branch_protection.repository_main](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
 | [github_repository.repository](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) | resource |
@@ -76,6 +77,7 @@ No modules.
 | <a name="input_developer_team"></a> [developer\_team](#input\_developer\_team) | Team ID that developers belong to | `string` | `""` | no |
 | <a name="input_dismiss_stale_reviews"></a> [dismiss\_stale\_reviews](#input\_dismiss\_stale\_reviews) | Dismiss approved reviews automatically when a new commit is pushed. Defaults to true. | `bool` | `true` | no |
 | <a name="input_enforce_admins"></a> [enforce\_admins](#input\_enforce\_admins) | Boolean, setting this to true enforces status checks for repository administrators | `bool` | `true` | no |
+| <a name="input_github_actions_variables"></a> [github\_actions\_variables](#input\_github\_actions\_variables) | A map of github actions variables to pass to GitHub | `map(any)` | `{}` | no |
 | <a name="input_github_secrets"></a> [github\_secrets](#input\_github\_secrets) | A map of secrets to pass to GitHub | `map(any)` | `{}` | no |
 | <a name="input_has_issues"></a> [has\_issues](#input\_has\_issues) | Turns on/off github issues | `bool` | `true` | no |
 | <a name="input_has_projects"></a> [has\_projects](#input\_has\_projects) | Turns on/off github projects | `bool` | `false` | no |
