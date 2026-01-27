@@ -139,6 +139,12 @@ variable "github_secrets" {
   default     = {}
 }
 
+variable "github_actions_variables" {
+  type        = map(any)
+  description = "A map of github actions variables to pass to GitHub"
+  default     = {}
+}
+
 variable "template" {
   description = "Template repository to use. (Default: {})"
   type = object({

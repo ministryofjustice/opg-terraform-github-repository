@@ -6,6 +6,14 @@ resource "github_actions_secret" "repository_secret" {
   plaintext_value = each.value
 }
 
+resource "github_actions_variable" "repository_variable" {
+  for_each = var.github_actions_variables
+
+  repository    = github_repository.repository.name
+  variable_name = each.key
+  value         = each.value
+}
+
 resource "github_actions_repository_permissions" "repository" {
   count           = length(var.allowed_github_actions) > 0 ? 1 : 0
   allowed_actions = "selected"
