@@ -594,3 +594,9 @@ variable "allowed_github_actions" {
   description = "List of github actions that are allowed to be used on the repository"
   type        = list(string)
 }
+
+variable "github_owned_allowed" {
+  default     = true
+  description = "Whether GitHub-owned actions are allowed in the repository"
+  type        = bool
+}

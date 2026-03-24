@@ -18,7 +18,7 @@ resource "github_actions_repository_permissions" "repository" {
   count           = length(var.allowed_github_actions) > 0 ? 1 : 0
   allowed_actions = "selected"
   allowed_actions_config {
-    github_owned_allowed = true
+    github_owned_allowed = var.github_owned_allowed
     patterns_allowed     = var.allowed_github_actions
     verified_allowed     = false
   }
