@@ -16,7 +16,6 @@ resource "github_repository" "repository" {
   homepage_url           = var.homepage_url
   is_template            = var.is_template
   visibility             = var.visibility
-  vulnerability_alerts   = var.vulnerability_alerts
   topics                 = var.topics
 
   dynamic "pages" {
@@ -56,4 +55,9 @@ resource "github_repository" "repository" {
 resource "github_branch_default" "default" {
   repository = github_repository.repository.name
   branch     = var.default_branch_name
+}
+
+resource "github_repository_vulnerability_alerts" "main" {
+  repository = github_repository.repository.name
+  enabled    = var.vulnerability_alerts
 }
