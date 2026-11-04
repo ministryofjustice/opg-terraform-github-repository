@@ -61,3 +61,10 @@ resource "github_repository_vulnerability_alerts" "main" {
   repository = github_repository.repository.name
   enabled    = var.vulnerability_alerts
 }
+
+resource "github_repository_custom_property" "business_unit" {
+  repository     = github_repository.repository.name
+  property_name  = "business-unit"
+  property_type  = "string"
+  property_value = [var.business_unit]
+}
