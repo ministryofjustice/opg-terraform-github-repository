@@ -606,3 +606,9 @@ variable "verified_allowed" {
   description = "Whether actions in GitHub Marketplace from verified creators are allowed"
   type        = bool
 }
+
+variable "business_unit" {
+  default     = "OPG"
+  description = "The business unit associated with the repository"
+  type        = string
+}
